@@ -62,7 +62,11 @@ Simple shell script that automatically installs the Zend <a href="http://www.zen
     <span class="pl-c1">- <span class="pl-ent">send:</span> 10081</span>
       <span class="pl-c1"><span class="pl-ent">to:</span> 10081</span></pre></div>
 
-<p><strong>4.</strong> Provision <code>homestead provision</code>.</p>
+<p><strong>4.</strong> Restart Homestead:</p>
+
+<pre lang="cli"><code>homestead halt
+homestead up --provision
+</code></pre>
 
 <p>That's it, Now open any of your homestead site and you should start seeing the Z-Ray Bar at the bottom of the page. You can access the admin panel for any of your homestead site by visiting the admin port <code>10081</code>. Example: <code>http://example.vm:10081/</code></p>
 

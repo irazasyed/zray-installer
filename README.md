@@ -28,7 +28,12 @@ ports:
       to: 10081
 ```
 
-**4.** Provision `homestead provision`.
+**4.** Restart Homestead:
+
+```cli
+homestead halt
+homestead up --provision
+```
 
 That's it, Now open any of your homestead site and you should start seeing the Z-Ray Bar at the bottom of the page. You can access the admin panel for any of your homestead site by visiting the admin port `10081`. Example: `http://example.vm:10081/`
 

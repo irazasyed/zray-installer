@@ -28,7 +28,7 @@ ports:
       to: 10081
 ```
 
-**4.** Restart Homestead:
+**4.** Restart and Provision Homestead:
 
 ```cli
 homestead halt
@@ -36,6 +36,13 @@ homestead up --provision
 ```
 
 That's it, Now open any of your homestead site and you should start seeing the Z-Ray Bar at the bottom of the page. You can access the admin panel for any of your homestead site by visiting the admin port `10081`. Example: `http://example.vm:10081/`
+
+> **NOTE:** If Z-Ray does not load and you are getting a 500 error in your browser console, it may be necessary to re-apply the permissions to the Z-Ray folder:
+
+```
+homestead ssh
+sudo chown -R vagrant:vagrant /opt/zray
+```
 
 ## Additional information
 
